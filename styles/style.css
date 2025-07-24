@@ -14,7 +14,7 @@ body {
     background-color: #f5f8ff;
 }
 
-header, main {
+header, main, footer {
     max-width: 1140px;
 }
 
@@ -251,6 +251,43 @@ header nav {
 }
 
 
+/* Footer */
+footer {
+    margin: 620px auto 0;
+    padding: 50px 0;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    font-family: "Inter";
+}
+.footer-first {
+    max-width: 280px;
+}
+.footer-first p {
+    margin-top: 16px;
+    font-size: 1.3rem;
+}
+.footer-middle ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+.footer-middle li a {
+    text-decoration: none;
+    color: #7a7c7f;
+}
+.footer-last {
+    display: flex;
+    gap: 24px;
+}
+.footer-last img {
+    width: 36px;
+    height: 36px;
+}
+
+
+
 
 
 
@@ -327,6 +364,22 @@ header nav {
     #mail, .sub-btn {
         font-size: 0.8rem;
     }
+    footer {
+        flex-direction: column;
+        margin-top: 400px;
+    }
+    .footer-first img {
+        width: 180px;
+    }
+    .footer-middle ul {
+        grid-template-columns: 1fr;
+    }
+    .footer-first p {
+        font-size: 1rem;
+    }
+    .footer-last {
+        flex-direction: row;
+    }
 }
 
 @media screen and (600px < width < 1180px) {
@@ -350,5 +403,8 @@ header nav {
     }
     #mail {
         width: 400px;
+    }
+    .footer-last {
+        flex-direction: column;
     }
 }
