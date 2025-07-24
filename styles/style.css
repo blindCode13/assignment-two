@@ -211,6 +211,47 @@ header nav {
 }
 
 
+/* Join Section */
+.join {
+    margin-top: 120px;
+    height: 500px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-image: url(../assets/news-letter-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.join h1 {
+    font-size: 3rem;
+    color: #fff;
+}
+.input-field {
+    height: 50px;
+    background-color: #fff;
+    display: flex;
+}
+#mail {
+    padding: 10px;
+    border: none;
+    width: 600px;
+    font-size: 1.05rem;
+}
+#mail:focus {
+    outline: none;
+}
+.sub-btn {
+    width: 180px;
+    font-size: 1.2rem;
+}
+
+
+
 
 
 @media screen and (width < 600px) {
@@ -269,10 +310,22 @@ header nav {
     #zabo {
         grid-column: 1;
         grid-row: 3;
-
     }
     #zabo h1 {
         font-size: 24px;
+    }
+    .join {
+        height: 260px;
+    }
+    .join h1 {
+        font-size: 1.5rem;
+    }
+    .input-field {
+        width: 320px;
+        height: 40px;
+    }
+    #mail, .sub-btn {
+        font-size: 0.8rem;
     }
 }
 
@@ -294,5 +347,8 @@ header nav {
     }
     #badge {
         right: 130px;
+    }
+    #mail {
+        width: 400px;
     }
 }
