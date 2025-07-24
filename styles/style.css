@@ -16,9 +16,9 @@ body {
 
 header, main {
     max-width: 1140px;
-    margin: 0 auto;
 }
 
+.center-align { margin: 0 auto; }
 .font-inter { font-family: "Inter"; }
 .font-notoserif { font-family: "Noto Serif"; }
 .text-gray { color: #7a7c7f; }
@@ -88,7 +88,6 @@ header nav {
 }
 .plants-description {
     max-width: 800px;
-    margin: 0 auto;
 }
 .plants h1 {
     font-size: 3rem;
@@ -99,7 +98,7 @@ header nav {
 }
 
 .card-container {
-    margin: 50px auto;
+    margin-top: 50px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px 20px;
@@ -108,7 +107,7 @@ header nav {
     width: 100%;
 }
 .card {
-    width: 260px; height: 484px;
+    width: 270px; height: 484px;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -121,7 +120,47 @@ header nav {
 
 
 
-@media screen and (width < 580px) {
+/* Plants Lover Section */
+.plants-lover {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 200px;
+}
+#lover-img-container {
+    position: relative;
+    overflow: visible;
+}
+#badge {
+    width: 286px;
+    position: absolute;
+    top: -140px; right: -140px;
+    animation: badge-rotate 5s linear infinite;
+}
+@keyframes badge-rotate {
+    from {transform: rotate(0);}
+    to {transform: rotate(360deg);}
+}
+.lover-description {
+    max-width: 480px;
+}
+.lover-description h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+.lover-description ul { margin-left: 30px; }
+.lover-description ul li {
+    font-size: 1.3rem;
+    color: #7a7c7f;
+    font-family: "Inter";
+}
+
+
+
+
+
+
+@media screen and (width < 600px) {
     header nav .logo {
         zoom: 0.6;
     }
@@ -132,8 +171,14 @@ header nav {
         margin-top: 28px;
         flex-direction: column-reverse;
     }
-    .banner h1, .plants h1 {font-size: 1.5rem;}
-    .banner p, .plants p, .card {font-size: 0.8rem;}
+    .banner h1, .plants h1,
+    .lover-description h1
+     {font-size: 1.5rem;}
+    .banner p,
+    .plants p, .card,
+    .lover-description ul li
+    {font-size: 0.8rem;}
+    
     .banner img {
         max-width: 100vw;
     }
@@ -148,9 +193,21 @@ header nav {
         height: 300px;
         gap: 20px;
     }
+    .card-btn {height: 30px;}
+    .plants-lover {
+        margin-top: 40px;
+        max-width: 300px;
+        flex-direction: column;
+    }
+    #badge {
+        display: none;
+    }
+    #lover-img-container img {
+        width: 100%;
+    }
 }
 
-@media screen and (580px < width < 1180px) {
+@media screen and (600px < width < 1180px) {
     .banner {
         margin-top: 28px;
         flex-direction: column-reverse;
@@ -162,5 +219,11 @@ header nav {
         width: 576px;
         grid-template-columns: repeat(2, 1fr);
     }
-    
+    .plants-lover {
+        max-width: 600px;
+        flex-direction: column;
+    }
+    #badge {
+        right: 130px;
+    }
 }
