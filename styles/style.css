@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+/* Default development for desktop first approch */
 /* Eliminated Default Styling */
 * {
     margin: 0;
@@ -9,15 +10,14 @@
     box-sizing: border-box;
 }
 
+/* common styling */
 body {
     padding: 16px;
-    background-color: #f5f8ff;
+    background-color: #eef3ff;
 }
-
 header, main, footer {
     max-width: 1140px;
 }
-
 .center-align { margin: 0 auto; }
 .font-inter { font-family: "Inter"; }
 .font-notoserif { font-family: "Noto Serif"; }
@@ -33,7 +33,15 @@ header, main, footer {
     background-color: #E95A08;
     color: #fff;
     cursor: pointer;
+    transition: 0.2s;
 }
+.primary-btn:not(.sub-btn):hover {
+    scale: 1.1;
+    background-color: transparent;
+    border: 2px solid #E95A08;
+    color: #E95A08;
+}
+
 
 /* Header Section */
 header nav {
@@ -65,7 +73,6 @@ header nav {
     align-items: center;
     justify-content: center;
 }
-
 .banner {
     margin-top: 120px;
     display: flex;
@@ -94,9 +101,7 @@ header nav {
 }
 .plants p {
     font-size: 1.3rem;
-
 }
-
 .card-container {
     margin-top: 50px;
     display: grid;
@@ -256,7 +261,7 @@ footer {
     margin: 620px auto 0;
     padding: 50px 0;
     display: flex;
-    gap: 20px;
+    gap: 30px;
     justify-content: space-between;
     font-family: "Inter";
 }
@@ -290,7 +295,7 @@ footer {
 
 
 
-
+/* Responsive system for mobile device */
 @media screen and (width < 600px) {
     header nav .logo {
         zoom: 0.6;
@@ -339,6 +344,9 @@ footer {
     #lover-img-container img {
         width: 100%;
     }
+    .latest-deals {
+        margin-top: 60px;
+    }
     .deals-img-container {
         margin-top: 50px;
         grid-template-columns: none;
@@ -382,6 +390,10 @@ footer {
     }
 }
 
+
+
+
+/* Responsive System for Mid Range Device */
 @media screen and (600px < width < 1180px) {
     .banner {
         margin-top: 28px;
