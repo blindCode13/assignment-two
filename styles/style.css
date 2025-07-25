@@ -139,6 +139,7 @@ header nav {
     width: 286px;
     position: absolute;
     top: -140px; right: -140px;
+    filter: drop-shadow(0 0 3px #000000ab);
     animation: badge-rotate 5s linear infinite;
 }
 @keyframes badge-rotate {
